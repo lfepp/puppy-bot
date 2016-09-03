@@ -4,7 +4,7 @@ var url = require('url');
 var request = require('request');
 
 var format = ".json";
-var apiKey = process.env.Wu_ACCESS // WU API key; will be set in Heroku
+var apiKey = process.env.API_KEY
 
 var bodyParser = require('body-parser')
 
@@ -27,7 +27,7 @@ app.post('/post', function(req, res) {
 });
 
 function cuteGif(callBack) {
-  var url = 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cute+dog+adorable'
+  var url = 'http://api.giphy.com/v1/gifs/random?api_key' + apiKey + '&tag=cute+dog+adorable';
 
   request(url, function (error, response, body) {
     if (!error && response.statusCode == 200) {
@@ -38,7 +38,7 @@ function cuteGif(callBack) {
         response_type: "in_channel",
         "attachments": [
           {
-            "text": "Cute animals!",
+            "text": "Cute puppies!",
             "image_url": icon_url,
           }
         ]
