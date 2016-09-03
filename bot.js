@@ -27,7 +27,7 @@ app.post('/post', function(req, res) {
 });
 
 function cuteGif(callBack) {
-  var url = 'http://api.giphy.com/v1/gifs/random?api_key' + apiKey + '&tag=cute+dog+adorable';
+  var url = 'http://api.giphy.com/v1/gifs/random?api_key=' + apiKey + '&tag=cute+dog+adorable';
 
   request(url, function (error, response, body) {
     if (!error && response.statusCode == 200) {
