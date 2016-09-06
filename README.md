@@ -9,4 +9,4 @@ Install Dependencies
 
 Run locally
 
-`BOT_API_KEY=your_api_key npm start`
+`API_KEY=your_api_key npm start`
