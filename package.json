@@ -2,9 +2,9 @@
   "name": "PuppyBot",
   "version": "1.0.0",
   "description": "A simple puppy gif slack bot.",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node bot/bot.js"
   },
   "dependencies": {
     "body-parser": "^1.15.2",

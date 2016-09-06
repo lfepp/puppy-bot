@@ -4,7 +4,7 @@ var baseURL = 'http://api.giphy.com/'
 var apiKey = process.env.API_KEY
 
 module.exports.getRandomGif = function(tags, callBack) {
-  var url = baseURL + 'v1/gifs/random?api_key=' + apiKey + formatGifTags(tags);
+  var url = baseURL + 'v1/gifs/random?api_key=' + apiKey + formattedGifTags(tags);
 
   request(url, function (error, response, body) {
     if (!error && response.statusCode == 200) {
@@ -17,7 +17,7 @@ module.exports.getRandomGif = function(tags, callBack) {
   });
 }
 
-function formatGifTags(tags) {
+function formattedGifTags(tags) {
   var tagsString = '&tag=';
   for (var i = 0; i < tags.length; i++) {
     var tag = tags[i];
