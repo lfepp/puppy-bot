@@ -3,6 +3,8 @@ var url = require('url');
 var bodyParser = require('body-parser');
 var gifService = require('./gif-service');
 
+var gifTags = [ 'cute', 'dog', 'adorable' ];
+
 var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -14,7 +16,7 @@ app.get('/', function(req, res) {
 
 // app.post is triggered when a POST request is sent to the URL '/post'
 app.post('/post', function(req, res) {
-  gifService.getRandomGif(function(body) {
+  gifService.getRandomGif(gifTags, function(body) {
     res.send(body);
   });
 });
