@@ -14,8 +14,7 @@ app.get('/', function(req, res) {
 
 // app.post is triggered when a POST request is sent to the URL '/post'
 app.post('/post', function(req, res) {
-  console.log("POST started");
-  gifService.getGif(function(body) {
+  gifService.getRandomGif(function(body) {
     res.send(body);
   });
 });
