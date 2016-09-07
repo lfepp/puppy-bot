@@ -2,8 +2,9 @@ var request = require('request');
 
 var baseURL = 'http://api.giphy.com/'
 var apiKey = process.env.API_KEY
+var test = process.env.TEST_ENV
 
-module.exports.getRandomGif = function(tags, callBack) {
+function getRandomGif(tags, callBack) {
   var url = baseURL + 'v1/gifs/random?api_key=' + apiKey + formattedGifTags(tags);
 
   request(url, function (error, response, body) {
@@ -33,11 +34,17 @@ function formattedGifTags(tags) {
 
 function gifBody(icon_url) {
   return {
-    response_type: "in_channel",
-    "attachments": [
+    'response_type': 'in_channel',
+    'attachments': [
       {
-        "image_url": icon_url
+        'image_url': icon_url
       }
     ]
   };
+};
+
+module.exports = {
+  formattedGifTags: formattedGifTags,
+  gifBody: gifBody,
+  getRandomGif: getRandomGif
 }
