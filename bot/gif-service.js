@@ -37,6 +37,7 @@ function gifBody(icon_url) {
     'response_type': 'in_channel',
     'attachments': [
       {
+        'text': 'Cute puppies!',
         'image_url': icon_url
       }
     ]
