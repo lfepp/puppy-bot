@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var gifService = require('./gif-service');
+var gifService = require('../gif-service');
 
 describe('gif-service', function() {
   it('should return formated gif tags', function() {
@@ -13,6 +13,7 @@ describe('gif-service', function() {
       response_type: 'in_channel',
       'attachments': [
         {
+          'text': 'Cute puppies!',
           'image_url': 'test_url'
         }
       ]
