@@ -3,7 +3,7 @@ var url = require('url');
 var bodyParser = require('body-parser');
 var gifService = require('./gif-service');
 
-var gifTags = [ 'cute', 'dog', 'adorable' ];
+var gifTags = [ 'cute', 'dog', 'adorable', 'babies' ];
 
 var app = express();
 app.use(bodyParser.json());
