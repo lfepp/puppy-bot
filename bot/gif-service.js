@@ -3,7 +3,7 @@ var request = require('request');
 var baseURL = 'http://api.giphy.com/'
 var apiKey = process.env.API_KEY
 
-// fetch random gif
+// get random gif
 function getRandomGif(tags, callBack) {
   var url = baseURL + 'v1/gifs/random?api_key=' + apiKey + formattedGifTags(tags);
 
