@@ -2,8 +2,8 @@ var request = require('request');
 
 var baseURL = 'http://api.giphy.com/'
 var apiKey = process.env.API_KEY
-var test = process.env.TEST_ENV
 
+// fetch random gif
 function getRandomGif(tags, callBack) {
   var url = baseURL + 'v1/gifs/random?api_key=' + apiKey + formattedGifTags(tags);
 
@@ -13,11 +13,13 @@ function getRandomGif(tags, callBack) {
 
       callBack(gifBody(data.data.image_url));
     } else {
+      // needs to send error via callBack
       console.log(error);
     }
   });
 }
 
+// format gif tags for request
 function formattedGifTags(tags) {
   var tagsString = '&tag=';
   for (var i = 0; i < tags.length; i++) {
@@ -32,6 +34,7 @@ function formattedGifTags(tags) {
   return tagsString;
 };
 
+// create gif body for request
 function gifBody(icon_url) {
   return {
     'response_type': 'in_channel',
@@ -44,6 +47,7 @@ function gifBody(icon_url) {
   };
 };
 
+// exports
 module.exports = {
   formattedGifTags: formattedGifTags,
   gifBody: gifBody,

@@ -5,7 +5,7 @@
   "main": "bot.js",
   "scripts": {
     "start": "node bot/bot.js",
-    "test": "TEST_ENV=true mocha bot/gif-service.spec.js"
+    "test": "mocha bot/tests/gif-service.spec.js"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
