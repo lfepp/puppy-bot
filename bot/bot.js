@@ -19,7 +19,7 @@ app.get('/', function(req, res) {
 // app.post is triggered when a POST request is sent to the URL '/post'
 app.post('/post', function(req, res) {
   gifService.getRandomGif(gifTags, function(body) {
-    // needs to check for error and send if needed
+    // res.statusCode = statusCode;
     res.send(body);
   });
 });

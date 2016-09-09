@@ -7,14 +7,14 @@ var apiKey = process.env.API_KEY
 function getRandomGif(tags, callBack) {
   var url = baseURL + 'v1/gifs/random?api_key=' + apiKey + formattedGifTags(tags);
 
-  request(url, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
+  request(url, function (err, res, body) {
+    if (!err) {
       var data = JSON.parse(body);
-
-      callBack(gifBody(data.data.image_url));
-    } else {
-      // needs to send error via callBack
-      console.log(error);
+      if (res.statusCode == 200) {
+        callBack(gifBody(data.data.image_url));
+      } else {
+        callBack(data);
+      }
     }
   });
 }
