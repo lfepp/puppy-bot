@@ -1,4 +1,4 @@
-# PuppyBot
+# Puppy Bot
 A puppy gif Slack bot.
 
 ## Getting started
