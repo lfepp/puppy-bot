@@ -1,11 +1,20 @@
 {
-    "extends": "google",
-    "env": {
-      "es6": true,
-      "node": true,
-      "mocha": true
-    },
-    "rules": {
-        "camelcase": [2, { "properties": "never" }]
-    }
+	"extends": "google",
+	"env": {
+		"es6": true,
+		"node": true,
+		"mocha": true
+	},
+	"rules": {
+		"camelcase": [2, {
+			"properties": "never"
+		}],
+		"require-jsdoc": ["error", {
+			"require": {
+				"FunctionDeclaration": false,
+				"MethodDefinition": false,
+				"ClassDeclaration": false
+			}
+		}]
+	}
 }
