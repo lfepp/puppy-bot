@@ -10,11 +10,11 @@ describe('gif-service', function() {
   it('should return formated gif body', function() {
     var body = gifService.gifBody('test_url');
     expect(body).to.deep.equal({
-      'response_type': 'in_channel',
-      'attachments': [
+      response_type: 'in_channel',
+      attachments: [
         {
-          'text': 'Cute puppies!',
-          'image_url': 'test_url'
+          text: 'Cute puppies!',
+          image_url: 'test_url'
         }
       ]
     });

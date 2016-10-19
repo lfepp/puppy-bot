@@ -2,14 +2,14 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var gifService = require('./gif-service');
 
-var morgan = require('morgan')
+var morgan = require('morgan');
 
 var app = express();
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(morgan('combined'))
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(morgan('combined'));
 
-var gifTags = [ 'cute', 'dog', 'adorable' ];
+var gifTags = ['cute', 'dog', 'adorable'];
 
 // for testing that the app is running
 app.get('/', function(req, res) {
