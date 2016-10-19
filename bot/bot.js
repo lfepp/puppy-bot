@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(morgan('combined'));
 
-var gifTags = ['cute', 'dog', 'adorable'];
+var gifTags = ['cute', 'dog', 'adorable', 'puppy', 'puppies'];
 
 // for testing that the app is running
 app.get('/', function(req, res) {

@@ -1,5 +1,4 @@
 var request = require('request');
-
 var baseURL = 'http://api.giphy.com/';
 var apiKey = process.env.API_KEY;
 
