@@ -9,6 +9,8 @@
 		"camelcase": ["error", {
 			"properties": "never"
 		}],
+		"max-len": ["error", 150, 2
+		],
 		"require-jsdoc": ["error", {
 			"require": {
 				"FunctionDeclaration": false,

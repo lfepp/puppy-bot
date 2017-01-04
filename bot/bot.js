@@ -1,15 +1,15 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var gifService = require('./gif-service');
+const express = require('express');
+const bodyParser = require('body-parser');
+const gifService = require('./gif-service');
 
-var morgan = require('morgan');
+const morgan = require('morgan');
 
-var app = express();
+let app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(morgan('combined'));
 
-var gifTags = ['cute', 'dog', 'adorable', 'puppy', 'puppies'];
+const gifTags = ['cute', 'dog', 'adorable', 'puppy', 'puppies'];
 
 // for testing that the app is running
 app.get('/', function(req, res) {
