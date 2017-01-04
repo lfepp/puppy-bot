@@ -1,3 +1,5 @@
+'use strict';
+
 const request = require('request');
 const baseURL = 'http://api.giphy.com/';
 const apiKey = process.env.API_KEY;
